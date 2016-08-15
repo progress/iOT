@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo"  xmlns:chart="nativescript-telerik-ui-pro/chart">
+  <Page.actionBar>
+      <ActionBar title="Draw">
+      </ActionBar>
+  </Page.actionBar>
+    <GridLayout>
+      <StackLayout>
+        <Label text="Tap to draw winner" class="title"/>
+        <Label text="{{ message }}" class="message" textWrap="true"/>
+        <Button text="Draw" tap="{{ tap }}" />
+        <ActivityIndicator busy="{{ isLoading }}" />
+      </StackLayout>
+    </GridLayout>
+
+</Page>

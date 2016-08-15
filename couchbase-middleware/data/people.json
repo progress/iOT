@@ -1,0 +1,204 @@
+[
+  {
+    "_id": "5722b49a446f52dedefc0746",
+    "nameOfProject": "Progress and Placemeter",
+    "mentor": "EDUARDO PELEGRI-LLOPART",
+    "teamLeader": "Alcides Sorto",
+    "teamMembers": [
+      "Alcides Sorto",
+      "Brayanne Reyes",
+      "Cesar Galvan",
+      "Luis Montejano"
+    ],
+    "beaconLocation": 432
+  },
+  {
+    "_id": "572e57d2dd54a86b8ca0a8b8",
+    "nameOfProject": "Open Source STOQS Project",
+    "mentor": "Mike McCann",
+    "teamLeader": "Devon Rusconi",
+    "teamMembers": [
+      "Devon Rusconi",
+      "Vitou Pen"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e2d72d2e0a68291e25c22",
+    "nameOfProject": "Low-Income Housing Tax Credit (LIHTC) Mapper",
+    "mentor": "Eliza Childs",
+    "teamLeader": "Miranda Trayford",
+    "teamMembers": [
+      "Mitchell Thane Fenton",
+      "Jose Diaz",
+      "Alonso Mendoza",
+      "Miranda Trayford"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e2e88d2e0a68291e25c23",
+    "nameOfProject": "Self-Driving Delivery Robot Tracking Website",
+    "mentor": "Stav Braun",
+    "teamLeader": "Ryan Green",
+    "teamMembers": [
+      "Edgar Sandoval",
+      "Nicholes Keigo Ishihara-Puzon",
+      "Ryan Green",
+      "Alexander Lamont"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e2f10d2e0a68291e25c24",
+    "nameOfProject": "HeavyConnect Data Dashboard",
+    "mentor": "Patrick Zelaya",
+    "teamLeader": "Zach Boline",
+    "teamMembers": [
+      "Luis Garcia",
+      "Rivka Garcia",
+      "Zach Boline"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e3057d2e0a68291e25c25",
+    "nameOfProject": "Global/Backyard Weather Modeling and Forecast Dissemination in the Cloud",
+    "mentor": "Sergey Frolov, Tim Whitcomb",
+    "teamLeader": "Orlando Ortega",
+    "teamMembers": [
+      "Pang Ying Her",
+      "Orlando Ortega",
+      "Imara Dharmakirthi"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e3106d2e0a68291e25c26",
+    "nameOfProject": "Media share web application",
+    "mentor": "Ian Bowers",
+    "teamLeader": "Arturo Lopez",
+    "teamMembers": [
+      "Daniel Diaz",
+      "Arturo Lopez",
+      "Michael Sarmiento",
+      "Elias Ramirez",
+      "Spencer Belleau"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e31dfd2e0a68291e25c27",
+    "nameOfProject": "Cohort Management Software on Salesforce Platform",
+    "mentor": "Pat Patterson, Tom Osborne",
+    "teamLeader": "Uriel Antonio",
+    "teamMembers": [
+      "Brian De Anda",
+      "Maritza Abzun",
+      "Monse Hernandez",
+      "Uriel Antonio"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e32b8d2e0a68291e25c28",
+    "nameOfProject": "CSUMB Waste Sorting Game/ Campus Waste Reduction Guide App",
+    "mentor": "Miguel Lara",
+    "teamLeader": "Maria Rivera",
+    "teamMembers": [
+      "Darrick Gowens",
+      "Jason Lumicao",
+      "Raymond Toledo",
+      "Maria Rivera",
+      "Adilene Constante"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e3361d2e0a68291e25c29",
+    "nameOfProject": "Big data analysis and visualization for wireless data",
+    "mentor": "YoungJoon Byun",
+    "teamLeader": "Eric Hernandez",
+    "teamMembers": [
+      "Jose R. Martinez",
+      "Alexandros Aliferis",
+      "Jun Takemoto",
+      "Eric Hernandez"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e33c8d2e0a68291e25c2a",
+    "nameOfProject": "Wireless mobile data analysis for California Cities",
+    "mentor": "YoungJoon Byun",
+    "teamLeader": "Russell Hammersmith",
+    "teamMembers": [
+      "Russell Hammersmith",
+      "David DeMers"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e354cd2e0a68291e25c2b",
+    "nameOfProject": "Impementing Time Series and Tracking Charts for Bugzilla defect Tracking",
+    "mentor": "Yelena Sosenskaya",
+    "teamLeader": "Andran Miguel",
+    "teamMembers": [
+      "Daniel Pesqueda",
+      "David Garcia",
+      "Adrian Miguel"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e35c4d2e0a68291e25c2c",
+    "nameOfProject": "Smartphone Game",
+    "mentor": "krysztof P",
+    "teamLeader": "Joshua Kling",
+    "teamMembers": [
+      "Salina Soto",
+      "Sean Gardner",
+      "Brian Huynh",
+      "Joshua Kling"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e363fd2e0a68291e25c2d",
+    "nameOfProject": "Big Data Tools",
+    "mentor": "Arijit Das",
+    "teamLeader": "Paul Tuttle",
+    "teamMembers": [
+      "Markus Shaw",
+      "Tyler Jackson",
+      "Joshua Kim",
+      "Matthew Wall"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e3db9d2e0a68291e25c2f",
+    "nameOfProject": "Mobile Data Collection, Storage and Network Analysis",
+    "mentor": "Weilian Su",
+    "teamLeader": "Paul Tuttle",
+    "teamMembers": [
+      "Enrique Preciado",
+      "Paul Tutte",
+      "Evan Schwander",
+      "Sean Sabour"
+    ],
+    "beaconLocation": 62310
+  },
+  {
+    "_id": "573e3e66d2e0a68291e25c30",
+    "nameOfProject": "A 3-D physics based, multiplayer action game where players control their spherical characters",
+    "mentor": "Krzysztof P",
+    "teamLeader": "Rob Macias",
+    "teamMembers": [
+      "Marcus Dixon",
+      "Rob Macias",
+      "Harrison Oglesby"
+    ],
+    "beaconLocation": 62310
+  }
+]

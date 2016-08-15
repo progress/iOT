@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo"  xmlns:chart="nativescript-telerik-ui-pro/chart">
+  <Page.actionBar>
+      <ActionBar title="Attendee">
+          <ActionBar.actionItems>
+              <ActionItem text="Draw" tap="{{draw}}" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+    <GridLayout >
+      <chart:RadCartesianChart id="cartesianChart" row="2">
+       <chart:RadCartesianChart.series>
+           <chart:AreaSeries items="{{ categoricalSource }}" categoryProperty="Time" valueProperty="Count">
+               <chart:AreaSeries.horizontalAxis>
+                   <chart:CategoricalAxis/>
+               </chart:AreaSeries.horizontalAxis>
+               <chart:AreaSeries.verticalAxis>
+                   <chart:LinearAxis />
+               </chart:AreaSeries.verticalAxis>
+           </chart:AreaSeries>
+       </chart:RadCartesianChart.series>
+   </chart:RadCartesianChart>
+  </GridLayout>
+</Page>
