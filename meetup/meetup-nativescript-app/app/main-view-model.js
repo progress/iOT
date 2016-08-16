@@ -5,17 +5,31 @@ var MeetupModel = (function (_super) {
     __extends(MeetupModel, _super);
     function MeetupModel() {
         _super.call(this);
+        this._data = [];
+        this._isLoading = false;
     }
-    Object.defineProperty(MeetupModel.prototype, "categoricalSource", {
+    Object.defineProperty(MeetupModel.prototype, "source", {
         get: function () {
-            return [
-                { Time: "6:00", Count: 2 },
-                { Time: "6:30", Count: 5 },
-                { Time: "7:00", Count: 10, },
-                { Time: "7:30", Count: 5 },
-                { Time: "8:00", Count: 2 },
-                { Time: "8:30", Count: 0 }
-            ];
+            return this._data;
+        },
+        set: function (value) {
+            if (value.length) {
+                this._data = value;
+                this.notifyPropertyChange("source", value);
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MeetupModel.prototype, "isLoading", {
+        get: function () {
+            return this._isLoading;
+        },
+        set: function (value) {
+            if (this._isLoading !== value) {
+                this._isLoading = value;
+                this.notifyPropertyChange("isLoading", value);
+            }
         },
         enumerable: true,
         configurable: true

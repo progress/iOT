@@ -18,6 +18,7 @@ var Routes = (function () {
                     person.firstName = body.firstName;
                     person.lastName = body.lastName;
                     person.isDirty = false;
+                    person.createdAt = new Date();
                     person.save(function (err, person) {
                         res.json(person);
                     });
@@ -25,6 +26,38 @@ var Routes = (function () {
                 else {
                     res.json(person);
                 }
+            });
+        });
+        app.get('/api/track', function (req, res) {
+            var mongoose = _this.settings.mongoose;
+            var Model = mongoose.model('person');
+            Model.aggregate([{
+                    "$group": {
+                        "_id": {
+                            "year": { "$year": "$createdAt" },
+                            "dayOfYear": { "$dayOfYear": "$createdAt" },
+                            "hour": { "$hour": "$createdAt" },
+                            "minute": { "$minute": "$createdAt" }
+                        },
+                        "count": {
+                            "$sum": 1
+                        }
+                    }
+                }, {
+                    "$sort": { "_id": 1 }
+                }], function (err, data) {
+                var results = [];
+                if (data.length) {
+                    for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+                        var result = data_1[_i];
+                        var id = result._id;
+                        results.push({
+                            time: id.hour + ":" + id.minute,
+                            count: result.count
+                        });
+                    }
+                }
+                res.json(results);
             });
         });
         app.get('/api/winner', function (req, res) {

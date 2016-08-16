@@ -9,7 +9,7 @@
     <GridLayout >
       <chart:RadCartesianChart id="cartesianChart" row="2">
        <chart:RadCartesianChart.series>
-           <chart:AreaSeries items="{{ categoricalSource }}" categoryProperty="Time" valueProperty="Count">
+           <chart:AreaSeries items="{{ source }}" categoryProperty="time" valueProperty="count">
                <chart:AreaSeries.horizontalAxis>
                    <chart:CategoricalAxis/>
                </chart:AreaSeries.horizontalAxis>

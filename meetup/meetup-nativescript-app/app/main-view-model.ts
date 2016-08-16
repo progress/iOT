@@ -3,19 +3,35 @@ import frameModule = require('ui/frame');
 
 export class MeetupModel extends observable.Observable {
 
-    get categoricalSource() {
-      return [
-        { Time: "6:00", Count: 2},
-        { Time: "6:30", Count: 5 },
-        { Time: "7:00", Count: 10, },
-        { Time: "7:30", Count: 5},
-        { Time: "8:00", Count: 2},
-        { Time: "8:30", Count: 0}
-      ]
+    private _data:any;
+    private _isLoading:any;
+
+    get source() {
+      return this._data;
+    }
+
+    set source(value: any) {
+      if (value.length){
+        this._data= value;
+        this.notifyPropertyChange("source", value)
+      }
     }
 
     constructor() {
         super();
+        this._data = [];
+        this._isLoading = false;
+    }
+
+    get isLoading() {
+      return this._isLoading;
+    }
+
+    set isLoading(value: boolean) {
+      if (this._isLoading !== value) {
+          this._isLoading = value;
+          this.notifyPropertyChange("isLoading", value)
+      }
     }
 
     public draw(){

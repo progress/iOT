@@ -41,7 +41,7 @@ var RouteModule = require(__dirname + '/routes');
 
 new RouteModule.Routes(app, settings);
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 
   var WebSocketClient = require('websocket').client;
@@ -72,6 +72,8 @@ http.createServer(app).listen(app.get('port'), function(){
   client.on('connect', function(connection) {
       _connection = connection
 
+      var url = util.format('http://%s:%s/api/track','localhost', server.address().port);
+
       connection.on('error', function(error) {
           console.log("Connection Error: " + error.toString());
       });
@@ -80,17 +82,12 @@ http.createServer(app).listen(app.get('port'), function(){
               var data = message.utf8Data;
               var json = JSON.parse(data);
 
-              console.log(json);
-
               var match = json.body.match(/epcString:[^-][^\s]+/);
 
               if (match.length) {
                 var tagId = match[0].split(":")[1].trim();
 
-                console.log(tagId);
-
                 var request = require('request');
-                var url = util.format('http://%s/api/track','localhost:3000');
 
                 request.post({
                     url : url,
@@ -105,19 +102,6 @@ http.createServer(app).listen(app.get('port'), function(){
                 });
               }
           }
-
-          // var request = require('request');
-          // var url = util.format('http://%s/api/track','localhost:3000');
-          //
-          // request.post({
-          //     url : url,
-          //     headers: {'content-type' : 'application/json'},
-          //     body : JSON.stringify({
-          //        firstName : "Mehfuz"
-          //     })
-          // }, function(err, response, body){
-          //
-          // });
       });
 
       connection.on('close', function() {

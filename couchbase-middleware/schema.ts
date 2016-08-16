@@ -8,10 +8,9 @@ export class Schema {
           firstName: String
           lastName: String,
           tagId: String,
-          isDirty: Boolean
+          isDirty: Boolean,
+          createdAt: Date
       });
-
-
 
       db.model('person', Person);
   }

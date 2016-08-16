@@ -28,6 +28,7 @@ export class Routes  {
                     person.firstName = body.firstName;
                     person.lastName = body.lastName;
                     person.isDirty = false
+                    person.createdAt = new Date()
 
                     person.save ((err, person)=> {
                         res.json(person);
@@ -50,6 +51,41 @@ export class Routes  {
                     res.json(person);
                 }
             });
+        });
+
+        app.get('/api/track', (req, res)=>{
+          let mongoose = _this.settings.mongoose;
+          let Model = mongoose.model('person');
+
+          Model.aggregate([{
+              "$group" : {
+                "_id": {
+                    "year": { "$year": "$createdAt" },
+                    "dayOfYear": { "$dayOfYear": "$createdAt" },
+                    "hour" : { "$hour": "$createdAt" },
+                    "minute": { "$minute": "$createdAt" }
+                },
+                "count" : {
+                  "$sum" : 1
+                }
+              }
+          }, {
+             "$sort": {"_id": 1 }
+          }], (err, data)=> {
+
+              var results = [];
+              if (data.length){
+                for(let result of data) {
+                    let id = result._id;
+                    results.push({
+                        time : id.hour + ":" + id.minute,
+                        count : result.count
+                    });
+                }
+              }
+              res.json(results);
+          });
+
         });
 
         app.get('/api/winner', (req, res)=>{
